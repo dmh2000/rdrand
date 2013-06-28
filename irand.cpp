@@ -20,7 +20,7 @@ Handle<Value> rand32(const Arguments& args) {
 
     b = rdrand32(&r,RETRY_COUNT);
     if (b == 0) {
-        r = 0;
+        ThrowException(String::New("RDRAND instruction failed"));
     }
 
     Local<Number> num = Number::New((double)r);
@@ -40,7 +40,7 @@ Handle<Value> rand53(const Arguments& args) {
     // get the random number
     b = rdrand64(&r,RETRY_COUNT);
     if (b == 0) {
-        r = 0;
+        ThrowException(String::New("RDRAND instruction failed"));
     }
 
     // cast it to a js double (loses 11 bits == 2048 of precision)
@@ -60,7 +60,7 @@ Handle<Value> rand64b(const Arguments& args) {
     // get the random value
     b = rdrand64(&r,RETRY_COUNT);
     if (b == 0) {
-        r = 0;
+        ThrowException(String::New("RDRAND instruction failed"));
     }
 
     // point at the raw bytes
@@ -94,7 +94,7 @@ Handle<Value> rand64s(const Arguments& args) {
     // get the random number
     b = rdrand64(&r,RETRY_COUNT);
     if (b == 0) {
-        r = 0;
+    	ThrowException(String::New("RDRAND instruction failed"));
     }
 
     // convert to a string

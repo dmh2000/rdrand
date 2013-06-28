@@ -1,11 +1,29 @@
+/*!
+ * rdrand : a wrapper on the Intel Ivy Bridge RDRAND instruction
+ * generates cryptographically random numbers using the Ivy Bridge hardware RNG
+ * Copywright(c) 2013 David howard <dmh2000@gmail.com>
+ * MIT licensed
+ */
 var rdrand = require('./build/Release/irand');
 
-if (rdrand.hasRdrand() === false) {
-  console.log("RDRAND instruction not supported");
+module.exports.rdrand32 = function() {
+	return rdrand.rand32();
 }
-else {
-  console.log(rdrand.rand32());
-  console.log(rdrand.rand53());
-  console.log(rdrand.rand64b());
-  console.log(rdrand.rand64s());
+
+module.exports.rdrand53 = function() {
+	return rdrand.rand53();
 }
+
+module.exports.rdrand64b = function() {
+	return rdrand.rand64b();
+}
+
+module.exports.rdrand64s = function() {
+	return rdrand.rand64s();
+}
+
+module.exports.hasRdrand = function() {
+	return rdrand.hasRdrand();
+}
+
+
