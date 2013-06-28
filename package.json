@@ -1,0 +1,26 @@
+{
+  "name": "rdrand",
+  "description": "A package wrapping the Intel RDRAND hardware random number generator instructino",
+  "author": "David Howard <dmh2000@gmail.com>",
+  "dependencies": {},
+  "devDependencies": {},
+  "engine": "node >= 0.8.x",
+  "scripts": {
+    "install": "(node-gyp rebuild 2> builderror.log) || (exit 0)"
+  },
+  "gypfile": true,
+  "readmeFilename": "README.md",
+  "gitHead": "a736efb56285f2b794310bb5d8c4c6a22e8bda6e",
+  "version": "0.0.1",
+  "main": "rdrand.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dmh2000/rdrand.git"
+  },
+  "keywords": [
+    "rdrand",
+    "cryptography",
+    "random"
+  ],
+  "license": "MIT"
+}
