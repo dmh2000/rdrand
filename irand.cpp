@@ -101,7 +101,7 @@ Handle<Value> rand64s(const Arguments& args) {
     len = sprintf(s,"%lu",r);
 
     // return it
-    return scope.Close(String::New(s,len));
+    return scope.Close(String::New(s,(int)len));
 }
 
 /**
@@ -111,7 +111,7 @@ Handle<Value> hasRdrand(const Arguments& args) {
     HandleScope scope;
     bool b;
 
-    b = hasRDRAND();
+    b = (hasRDRAND() != 0);
 
     return scope.Close( Boolean::New(b));
 }
