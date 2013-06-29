@@ -67,28 +67,6 @@ int hasRDRAND(void)
 		 return 0;
 }
 
-/* get a 16 bit random value using the RDRAND instruction
-   will retry  at least 1 or more times as specified by the retry count
-   if a valid random number is obtained, r is initialized with the value
-   returns nonzero if a valid random number is obtained, 0 otherwise
-*/
-int rdrand16(uint16_t *r,int retry)
-{
-    int b;
-    int i;
-
-    if (retry == 0) return _rdrand16(r);
-
-    b = 0;
-    for(i=0;i<retry;i++) {
-        b = _rdrand16(r);
-        if (b != 0) {
-            break;
-        }
-    }
-    return b;
-}
-
 /* get a 32 bit random value using the RDRAND instruction
    will retry  at least 1 or more times as specified by the retry count
    if a valid random number is obtained, r is initialized with the value
