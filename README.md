@@ -1,14 +1,15 @@
 rdrand
 ======
 
-node.js module providing support for the Intel Ivy Bridge (and later) RDRAND instruction
+node.js module providing support for the Intel Ivy Bridge (and later) RDRAND instruction.
 
 This is a work in progress!
 
-provides a wrapper around functions to access the x64 RDRAND instruction to get hardware generated, 
-cryptographically secure (per Intel) random numbers.
+Intel Ivy Bridge/2nd generation and later Core processors have a hardware random number generator that
+is compliant with various crypto standards. This module provides a wrapper around functions to access
+the RDRAND instruction to get hardware generated cryptographically secure (per Intel) random numbers.
 
-I am not a crypto expert. I just implemented the functions. For more info on RDRAND and the hardware random number
+WARNING: I am not a crypto expert. I just implemented the functions. For more info on RDRAND and the hardware random number
 generator, google 'intel RDRAND'. 
 
 platforms tested
