@@ -20,7 +20,7 @@ platforms tested
 
 resources used
 --------------
-RDRAND64 : Author: Stephen Higgins <sjh@viathefalcon.net> Blog: http://blog.viathefalcon.net/
-Intel RDRAND library :  http://software.intel.com/en-us/articles/intel-digital-random-number-generator-drng-software-implementation-guide
+* RDRAND64 : Author: Stephen Higgins <sjh@viathefalcon.net> Blog: http://blog.viathefalcon.net/
+* Intel RDRAND library :  http://software.intel.com/en-us/articles/intel-digital-random-number-generator-drng-software-implementation-guide
 
 
