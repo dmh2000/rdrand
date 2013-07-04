@@ -2,7 +2,26 @@
   "targets": [
     {
       "target_name": "irand",
-      "sources": [ "irand.cpp","u/rdrand.c" ]
-    }
+      "conditions": [
+        ["OS=='win'",
+          {
+            "sources": [
+              "irand.cpp",
+              "w/ia_rdrand.c",
+              "w/rdrand64.obj",
+            ]
+          }
+        ],
+        ["OS!='win'",
+          {
+            "sources": [
+              "irand.cpp",
+              "u/rdrand.c",
+            ]
+          }
+        ]
+      ]
+  }
   ]
 }
+

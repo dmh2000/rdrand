@@ -19,6 +19,7 @@ module.exports.rdrand64b = function() {
 }
 
 module.exports.rdrand64s = function() {
+  var s = rdrand.rand64s();
 	return rdrand.rand64s();
 }
 

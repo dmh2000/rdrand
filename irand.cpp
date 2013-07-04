@@ -88,7 +88,6 @@ Handle<Value> rand64s(const Arguments& args) {
     HandleScope scope;
     uint64_t r;
     char     s[24];  // max length of 64 bit number as decimal string is 20 digits
-    size_t   len;
     int      b;
 
     // get the random number
@@ -98,10 +97,14 @@ Handle<Value> rand64s(const Arguments& args) {
     }
 
     // convert to a string
-    len = sprintf(s,"%lu",r);
+#ifdef WIN32
+    sprintf(s,"%llu",r);
+#else
+	sprintf(s,"%lu",r);
+#endif
 
     // return it
-    return scope.Close(String::New(s,(int)len));
+    return scope.Close(String::New(s));
 }
 
 /**

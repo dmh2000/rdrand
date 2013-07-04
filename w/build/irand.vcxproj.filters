@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\w">
+      <UniqueIdentifier>{86DEC16F-EF84-6869-6F92-5F8408C3B327}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\irand.cpp">
+      <Filter>..</Filter>
+    </ClCompile>
+    <None Include="..\binding.gyp">
+      <Filter>..</Filter>
+    </None>
+    <ClCompile Include="..\w\ia_rdrand.c">
+      <Filter>..\w</Filter>
+    </ClCompile>
+    <None Include="..\w\rdrand64.obj">
+      <Filter>..\w</Filter>
+    </None>
+  </ItemGroup>
+</Project>
