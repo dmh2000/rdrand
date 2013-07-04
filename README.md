@@ -27,5 +27,27 @@ license
 -------
 * MIT license with the exception u/rdrand.c - Intel specific license (freely reusable)
 
+API 
+---
+
+    function hasRdrand() : returns a boolean indicating if the processor supports the RDRAND instruction
+    // true if it does, false if it doesn't
+    // be sure to call this first because if you call one of the following functions on a processor
+    // that doesn't support RDRAND, you will be a segfault for an illegal instruction.
+    // That is by design. If you need a fallback alternative, build that on top of this module.
+
+    function rdrand32() : returns a 32 bit random number as a whole number , type Number
+
+    function rdrand53() : returns a 53 bit random number as a whole number , type Number 
+    // why a 53 bit value? because a Number is a 64 bit float and it has 53 bits of precision.
+    // any value larger than what fits in 53 bits will be an approximation which is not what you want here.
+    // if you want a full 64 bits, use rdrand64b or rdrand64s
+    // I'm not even sure if this is useful. 
+
+    function rdrand64b() : returns an array of 8 bytes comprising the full 64 bit random value
+
+    function rdrand64s() : returns a string of up to 20 digits comprising the full 64 bit random value
+
+
 
 
