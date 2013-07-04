@@ -15,12 +15,17 @@ generator, google 'intel RDRAND'.
 platforms tested
 ----------------
 * Ubuntu Linux 13.x, x64 : npm install works and executes properly
-** the RDRAND instruction is supported in the 32 bit mode of the processor, however 32 bit builds are not yet implemented here
+  the RDRAND instruction is supported in the 32 bit mode of the processor, however 32 bit builds are not yet implemented here
 * Windows 8 with Visual Studio 2012 : works but requires manual install. see w/readme.txt
 
 resources used
 --------------
 * RDRAND64 : Author: Stephen Higgins <sjh@viathefalcon.net> Blog: http://blog.viathefalcon.net/
 * Intel RDRAND library :  http://software.intel.com/en-us/articles/intel-digital-random-number-generator-drng-software-implementation-guide
+
+license
+-------
+* MIT license with the exception u/rdrand.c - Intel specific license (freely reusable)
+
 
 
