@@ -5,7 +5,7 @@ node.js module providing support for the Intel Ivy Bridge (and later) RDRAND ins
 
 This is a work in progress!
 
-Intel Ivy Bridge/2nd generation and later Core processors have a hardware random number generator that
+Intel Ivy Bridge/3rd generation and later Core processors have a hardware random number generator that
 is compliant with various crypto standards. This module provides a wrapper around functions to access
 the RDRAND instruction to get hardware generated cryptographically secure (per Intel) random numbers.
 
