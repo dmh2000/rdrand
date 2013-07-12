@@ -12,6 +12,8 @@ the RDRAND instruction to get hardware generated cryptographically secure (per I
 WARNING: I am not a crypto expert. I just implemented the functions. For more info on RDRAND and the hardware random number
 generator, google 'intel RDRAND'. 
 
+Consider using the built-in node Crypto package for random number generation in real apps unless you really know what you are doing.
+
 platforms tested
 ----------------
 * Ubuntu Linux 13.x, x64 : npm install works and executes properly
